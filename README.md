@@ -10,20 +10,25 @@
 
 ---
 
-## 🧐 What is this?
+## 🧐 Why this?
 
-In many Markdown renderers (GitHub, VSCode Preview, Zenn, etc.), bold text (`**BOLD**`) fails to render if it's placed immediately next to CJK (Chinese, Japanese, Korean) characters without a space.
+In modern Markdown renderers like GitHub, bold text (`**BOLD**`) is often handled correctly even without a space. However, **many other platforms and tools (such as Zenn, VSCode Preview, and older renderers) still fail to parse bold markers when they are adjacent to CJK characters.**
 
-`md-bold-spacer` is a lightning-fast, zero-dependency CLI tool that automatically fixes this by inserting half-width spaces between CJK characters and bold markers.
+`md-bold-spacer` ensures your Markdown looks **exactly the same everywhere** by inserting half-width spaces between CJK characters and bold markers.
 
-### Before
-これは**太字**です。 (Might not render as bold)
+### Comparison
 
-### After
-これは **太字** です。 (Always renders correctly)
+#### ❌ Before (Potentially broken on Zenn/VSCode)
+`これは**太字**です。`  
+-> Might render as: これは**太字**です。 (Stars might remain visible)
+
+#### ✅ After (Works universally)
+`これは **太字** です。`  
+-> Renders as: これは **太字** です。
 
 ## ✨ Features
 
+- **Platform Agnostic**: Ensures consistent rendering across GitHub, Zenn, VSCode, and more.
 - **Zero Dependency**: Extremely lightweight and fast.
 - **Universal**: Guaranteed to run on both **Node.js** and **Bun**.
 - **Safe**: Automatically protects Code Blocks (```) and Inline Code (`).
