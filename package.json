@@ -1,0 +1,33 @@
+{
+  "name": "md-bold-spacer",
+  "version": "1.0.0",
+  "description": "Fix bold rendering issues in Japanese/CJK Markdown by automatically inserting half-width spaces.",
+  "main": "dist/index.js",
+  "type": "module",
+  "bin": {
+    "md-bold-spacer": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "bun build ./src/index.ts --outfile ./dist/index.js --target node",
+    "test": "bun test",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "markdown",
+    "japanese",
+    "cjk",
+    "bold",
+    "spacer",
+    "formatter"
+  ],
+  "author": "kazuki-ookura",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}
