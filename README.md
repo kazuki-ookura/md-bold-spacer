@@ -6,7 +6,7 @@
 
 **Stop the "Bold Not Rendering" bug in CJK Markdown without heavy tools like textlint.**
 
-[日本語のREADMEは下記をご覧ください](#日本語)
+[日本語のREADMEは下記をご覧ください](#japanese)
 
 ---
 
@@ -48,7 +48,7 @@ npx md-bold-spacer ./articles
 
 ---
 
-<a name="日本語"></a>
+<div id="japanese"></div>
 
 ## 🇯🇵 日本語版
 
